@@ -1,6 +1,8 @@
 const {onRequest} = require("firebase-functions/v2/https");
-const line = require("./utils/line");
-const gemini = require("./utils/gemini");
+const line = require("./line");
+const gemini = require("./gemini");
+const facebook = require("./facebook");
+
 
 exports.webhook = onRequest(async (req, res) => {
   if (req.method === "POST") {
